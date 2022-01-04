@@ -1,52 +1,56 @@
 {
-  "name": "tiled-images",
-  "version": "1.0.0",
-  "description": "Package for generating tiled images",
-  "main": "index.js",
-  "scripts": {
-    "test": "npm run test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/arianabdi/tiled-images.git"
-  },
-  "keywords": [
-    "join-images",
-    "tile-images",
-    "tiled-images",
-    "combine-images",
-    "attachimages"
-  ],
-  "author": "Arian abdi",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/arianabdi/tiled-images/issues"
-  },
-  "homepage": "https://github.com/arianabdi/tiled-images#readme",
-  "devDependencies": {
-    "lerna": "^4.0.0",
-    "@types/jest": "^26.0.23",
-    "@types/jest-image-snapshot": "^4.3.0",
-    "@types/node": "^15.6.1",
-    "@types/sharp": "^0.28.2",
-    "@typescript-eslint/eslint-plugin": "^4.25.0",
-    "@typescript-eslint/parser": "^4.25.0",
-    "eslint": "^7.27.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-jest": "^24.3.6",
-    "eslint-plugin-prettier": "^3.4.0",
-    "eslint-plugin-sort-keys-fix": "^1.1.1",
-    "jest": "^27.0.3",
-    "jest-image-snapshot": "^4.5.1",
-    "prettier": "^2.3.0",
-    "rimraf": "^3.0.2",
-    "sharp": "^0.29.0",
-    "ts-jest": "^27.0.1",
-    "tsutils": "^3.21.0",
-    "typescript": "^4.3.2"
-  },
-  "dependencies": {
-    "sharp": "^0.29.3",
-    "tslib": "^2.3.1"
-  }
+    "name": "tiled-images",
+    "version": "1.0.0",
+    "description": "Package for generating tiled images",
+    "main": "index.js",
+    "scripts": {
+        "test": "npm run test",
+        "build": "tsc -p tsconfig.release.json",
+        "pre-publish": "npx prettier --write . && npm run build"
+    },
+    "lint-staged": {
+        "**/*": "prettier --write --ignore-unknown"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/arianabdi/tiled-images.git"
+    },
+    "keywords": [
+        "join-images",
+        "tile-images",
+        "tiled-images",
+        "combine-images",
+        "attachimages"
+    ],
+    "author": "Arian abdi",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/arianabdi/tiled-images/issues"
+    },
+    "homepage": "https://github.com/arianabdi/tiled-images#readme",
+    "devDependencies": {
+        "@types/jest": "^26.0.23",
+        "@types/jest-image-snapshot": "^4.3.0",
+        "@types/node": "^15.6.1",
+        "@types/sharp": "^0.28.2",
+        "@typescript-eslint/eslint-plugin": "^4.25.0",
+        "@typescript-eslint/parser": "^4.25.0",
+        "eslint": "^7.27.0",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-jest": "^24.3.6",
+        "eslint-plugin-prettier": "^3.4.0",
+        "eslint-plugin-sort-keys-fix": "^1.1.1",
+        "jest": "^27.0.3",
+        "jest-image-snapshot": "^4.5.1",
+        "prettier": "^2.3.0",
+        "rimraf": "^3.0.2",
+        "sharp": "^0.29.0",
+        "ts-jest": "^27.0.1",
+        "tsutils": "^3.21.0",
+        "typescript": "^4.3.2"
+    },
+    "dependencies": {
+        "sharp": "^0.29.3",
+        "tslib": "^2.3.1"
+    }
 }
