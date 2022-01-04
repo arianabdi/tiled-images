@@ -1,6 +1,6 @@
 {
     "name": "tiled-images",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Package for generating tiled images",
     "main": "index.js",
     "scripts": {
